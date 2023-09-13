@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <stdlib.h>
+#include <math.h>
 #include <array>
 using namespace std;
 float* create_array(int n);

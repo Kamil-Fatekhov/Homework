@@ -15,19 +15,18 @@ void array_out(int* arr, int n) {
 	}
 }
 int unique(int* arr, int n) {
-	int* arr_new = new int[n];
-	arr_new[0] = arr[0];
+	
 	int i = 1;
 	int j = 1;
 	int flag = 0;
 	while (i < n) {
 		while(flag < j) {
-			if (arr_new[flag] == arr[i]) {
+			if (arr[flag] == arr[i]) {
 				flag = 0; i++; if (i == n) break;
 			}
 			else {
-				if (flag == j - 1 && arr_new[flag] != arr[i]) {
-					arr_new[j] = arr[i]; j++; flag = 0; i++;
+				if (flag == j - 1 && arr[flag] != arr[i]) {
+					arr[j] = arr[i]; j++; flag = 0; i++;
 					if (i == n) break;
 
 				}
@@ -42,21 +41,21 @@ int unique(int* arr, int n) {
 int* new_arr(int* arr, int n, int uniq) {
 	int* arr_new = new int[uniq];
 	arr_new[0] = arr[0];
-	int i = 1;
-	int j = 1;
+	int i = 1;// фиксированный элемент начального массива
+	int j = 1;// длина нового массива
 	int flag = 0;
 	while (i < n) {
 		while (flag < j) {
 			if (arr_new[flag] == arr[i]) {
-				flag = 0; i++; if (i == n) break;
+				flag = 0; i++; if (i == n) break;// сравниваем элементы нового массива с элементами старого, при совападении переходим к новому фиксированному числу начального массива
 			}
 			else {
 				if (flag == j - 1 && arr_new[flag] != arr[i]) {
-					arr_new[j] = arr[i]; j++; flag = 0; i++;
+					arr_new[j] = arr[i]; j++; flag = 0; i++; // если элемент нового, не равен элементу начального и при этом элемент последний в массиве, то записываем новый элем нач массива
 					if (i == n) break;
 
 				}
-				else flag++;
+				else flag++;// иначе проверяем следующий элемент исходного
 			}
 
 			//j++;

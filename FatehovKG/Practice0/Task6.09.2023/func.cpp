@@ -11,7 +11,7 @@ float* array_sqr(float* arr, int n) {
 	float* array_new = new float[n];
 	for (int i = 0; i < n; i++) {
 		if (arr[i] > 10)
-			array_new[i] = arr[i] * arr[i];
+			array_new[i] = sqrt(arr[i]);
 		else
 			array_new[i] = arr[i];
 	}
