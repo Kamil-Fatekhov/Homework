@@ -14,9 +14,9 @@ public:
 	friend ostream& operator<<(ostream& os, const Vector& vector);
 	friend istream& operator>>(istream& input, Vector& vector);
 	const Vector& operator=(const Vector& other);
-	float operator*(Vector& other);
-	float cos(Vector& other);
-	double vector_length();
+	float operator*(Vector& other) const;
+	float cos(Vector& other) const;
+	double vector_length() const;
 private:
 	float x;
 	float y;

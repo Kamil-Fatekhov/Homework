@@ -15,7 +15,7 @@ Vector Vector::operator+(Vector& other) {
 	return res;
 }
 ostream& operator<< (ostream& os, const Vector& vector) {
-	os << "x: " << vector.x << endl << "y: " << vector.y << endl << "z: " << vector.z;
+	os <<   vector.x <<   " " << vector.y <<  " " << vector.z;
 	return os;
 }
 Vector Vector::operator-(Vector& other) {
@@ -25,7 +25,7 @@ Vector Vector::operator-(Vector& other) {
 	res.z = z - other.z;
 	return res;
 }
-double Vector::vector_length() {
+double Vector::vector_length() const {
 	return sqrt(x * x + y * y + z * z);
 }
 const Vector& Vector::operator=(const Vector& other) {
@@ -34,10 +34,10 @@ const Vector& Vector::operator=(const Vector& other) {
 	z = other.z;
 	return *this;
 }
-float Vector::operator*(Vector& other) {
+float Vector::operator*(Vector& other) const {
 	return other.x * x + other.y * y + other.z * z;
 }
-float Vector::cos(Vector& other) {
+float Vector::cos(Vector& other) const{
 	return (*this * other) / (this->vector_length() * other.vector_length());
 }
 istream& operator>> (istream& input, Vector& vector) {
