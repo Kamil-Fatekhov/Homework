@@ -1,0 +1,5 @@
+1 Ivanov Ivan Ivanovich 01 01 1998 +7(999)123-45-67
+2 Petrov Petr Petrovich 10 05 1999 +7(987)654-32-10
+3 Smirnova Elena Aleksandrovna 25 12 1997 +7(926)789-01-23
+4 Sokolova Anna Sergeevna 17 09 1998 +7(911)234-56-78
+5 Kuznecov Denis Pavlovich 03 07 1996 +7(925)345-67-89
