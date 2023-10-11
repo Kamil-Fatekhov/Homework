@@ -214,6 +214,7 @@ void student_group::del_student(string adress) {
 	cout << "\nenter student index for delete student ";
 	int Index;
 	cin >> Index;
+	if (Index <= 0) throw "Index cant be negative";
 	std::ifstream inputFile(adress);
 	std::ofstream tempFile("temp.txt");
 	std::string line;
